@@ -15,13 +15,13 @@ This language is set up different than other languages.
 
 ### Version History
 
-  Builds Version
+#### Builds Version
 
-  1.10.20.3 Added Image and fixed Terminal error
+    * 1.10.20.3 Added Image and fixed Terminal error
 
-  1.10.20.2 - Changed readme
+    * 1.10.20.2 - Changed readme
 
-  1.10.20.1 - Put scripts and style into seperate folders.
+    * 1.10.20.1 - Put scripts and style into seperate folders.
 
 ### Upcomming Updates
 #### In Progress
