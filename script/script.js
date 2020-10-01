@@ -102,7 +102,7 @@ function translate(script){
   var sheight = window.innerHeight * .4;
   script = 'jQuery(function($, undefined) { $("#term_demo").terminal(function(command) {';
   var secondpart = '}, { ';
-  var thirdpart = 'height: ' + sheight + ', width: ' + switdh + ', prompt: "index.jam >" });});'
+  var thirdpart = 'height: ' + sheight + ', width: ' + switdh + ', prompt: "index.jam >" });});';
 
    var i = 0;
   while (i < lines.length){
@@ -110,7 +110,7 @@ function translate(script){
       script2 = script2 + 'greetings: "' + lines[i + 1] + '",';
       i++; 
     }
-    else 
+    // else 
     i++;
   }
   script = script + secondpart + script2 + thirdpart;

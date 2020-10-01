@@ -1,8 +1,8 @@
 ## **JamPlus**
-JamPlus is a simple easy to use language, with very simple commands. It is written in HTML5, JS and CSS, without the help of Node JS or NPM. It is a sequal to Jam, which is written in Node JS, but in order to convert it over to HTML5, I would've needed to done more work than just creating a new version. The site can be found here at: https://Jam-Site.mamamia5x.repl.co
+JamPlus is a simple easy to use language, with very simple commands. It is written in HTML5, JS and CSS, without the help of Node JS or NPM. It is a sequal to Jam, which is written in Node JS, but in order to convert it over to HTML5, I would've needed to done more work than just creating a new version. The site can be found here at: https://JamPlus.mamamia5x.repl.co
 
 
-##### *If you want to see documentation, go to the wiki found [here](https://github.com/mamamia5x/JamPlus-Compiler/wiki).*
+##### *If you want to see documentation, go to the wiki found [here](https://github.com/mamamia5x/JamPlus/wiki).*
 ### Commands
 - startsay
   - The first thing the script says once it starts.
@@ -16,7 +16,11 @@ This language is set up different than other languages.
 ### Version History
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Builds Version
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.10.20.3 Added Image and fixed Terminal error
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.10.20.2 - Changed readme
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.10.20.1 - Put scripts and style into seperate folders.
 
 ### Upcomming Updates
