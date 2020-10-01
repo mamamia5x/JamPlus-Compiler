@@ -3,9 +3,6 @@ JamPlus is a simple easy to use language, with very simple commands. It is writt
 
 
 ##### *If you want to see documentation, go to the wiki found [here](https://github.com/mamamia5x/JamPlus/wiki).*
-### Commands
-- startsay
-  - The first thing the script says once it starts.
 
 ### Rules
 This language is set up different than other languages.

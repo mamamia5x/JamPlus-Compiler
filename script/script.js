@@ -110,7 +110,10 @@ function translate(script){
       script2 = script2 + 'greetings: "' + lines[i + 1] + '",';
       i++; 
     }
-    // else 
+    else if (lines[i] == 'new data'){
+      script = 'var ' + lines[i + 1] + ';' + script;
+      i++;
+    }
     i++;
   }
   script = script + secondpart + script2 + thirdpart;
