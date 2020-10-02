@@ -95,15 +95,17 @@ function errorHandler(e) {
   console.log('Error: ' + msg);
 }
 
+
+
 function translate(script){
   var lines = script.split('\n');
   var script2 = '';
   var switdh = window.innerWidth * .5;
   var sheight = window.innerHeight * .4;
-  script = 'jQuery(function($, undefined) { $("#term_demo").terminal(function(command) {';
+  script = 'jQuery(function($, undefined) { $("#term_demo").terminal(function(userinput) {';
   var secondpart = '}, { ';
   var promptything = 'index.jam >';
-
+  var ifs = 0;
    var i = 0;
   while (i < lines.length){
     if (lines[i] == 'startsay'){
@@ -113,19 +115,39 @@ function translate(script){
     else if (lines[i] == 'say'){
       script = script + 'this.echo(' + lines[i + 1] + ');';
     }
+    // else if (lines[i] == 'oper'){
+    //   script = 'function ' + lines[i + 1] + '(userinput){' + script;
+    //   i++;
+    // }
+    // else if (lines [i] == 'calloper'){
+    //   script = script + lines[i + 1] + '(userinput);';
+    //   i++;
+    // }
     else if (lines[i] == 'newdata'){
       script = 'var ' + lines[i + 1] + ';' + script;
       i++;
     }
+    else if (lines[i] == 'startdata'){
+      script = 'var ' + lines[i + 1] + '=' + lines[i + 2] + ';' + script;
+      i++;
+      i++;
+    }
     else if (lines[i] == 'setdata'){
-      script = script + lines[i + 1] + ' = ' + lines[i + 2];
-    //the set data needs to be
+      script = script + lines[i + 1] + ' = ' + lines[i + 2] + ';';
       i++;
       i++;
     }
     else if (lines[i] == 'command'){
-      script = script + 'if (command == "' + lines[i + 1] + '")';
+      ifs ++;
+      specialtext = 'if';
+      if (ifs > 1){
+        specialtext = 'else if';
+      }
+      script = script + specialtext + ' (userinput == "' + lines[i + 1] + '")';
       i++;
+    }
+    else if (lines[i] == 'none'){
+      script = script + 'else';
     }
     else if (lines[i] == 'then'){
       script = script + '{';
@@ -137,6 +159,22 @@ function translate(script){
       promptything = lines[i + 1];
       i++;
     }
+    else if (lines[i] == 'if'){
+      script = script + 'if (' + lines[i + 1] + lines[i + 2] + lines[i + 3] + ')';
+      i++;
+      i++;
+      i++;
+    }
+    else if (lines[i] == 'eif'){
+      script = script + 'else if (' + lines[i + 1] + lines[i + 2] + lines[i + 3] + ')';
+      i++;
+      i++;
+      i++;
+    }
+    else if (lines[i] == 'else'){
+      script = script + 'else';
+      //same as none command 
+    }
     else {
       //error function  
     }
@@ -146,6 +184,10 @@ function translate(script){
   script = script + secondpart + script2 + thirdpart;
   writelascript(script);
 }
+
+
+
+
 function writelascript (script){
   if (srcy !== undefined){
     srcy.remove();
