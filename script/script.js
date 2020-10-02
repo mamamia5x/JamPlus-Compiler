@@ -112,6 +112,7 @@ function translate(script){
     }
     else if (lines[i] == 'say'){
       script = script + 'this.echo(' + lines[i + 1] + ');';
+      i++;
     }
     else if (lines[i] == 'newdata'){
       script = 'var ' + lines[i + 1] + ';' + script;
