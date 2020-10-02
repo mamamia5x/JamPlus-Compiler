@@ -16,17 +16,11 @@ This language is set up different than other languages.
   - For example, the first line would be "startsay", then the next line would be what you want the program to say when started.
 
 ### Version History
+* V.0.0.3 - Various bug fixes and added favicon and title.
 
 * V.0.0.2 - Added lots of commands, added new site url.
 
 * V.0.0.1 - Very first version.
-
-#### Builds Version
-* 1.10.20.3 - Added github link, added new commands. 
-
-* 1.10.20.2 - Added new site url, and fixed readme to reflect it.
-
-* 1.10.20.1 - Add command "newdata"
 
 ### Upcomming Updates
 #### In Progress
