@@ -102,7 +102,7 @@ function translate(script){
   var sheight = window.innerHeight * .4;
   script = 'jQuery(function($, undefined) { $("#term_demo").terminal(function(command) {';
   var secondpart = '}, { ';
-  var thirdpart = 'height: ' + sheight + ', width: ' + switdh + ', prompt: "index.jam >" });});';
+  var promptything = 'index.jam >';
 
    var i = 0;
   while (i < lines.length){
@@ -110,12 +110,39 @@ function translate(script){
       script2 = script2 + 'greetings: "' + lines[i + 1] + '",';
       i++; 
     }
-    else if (lines[i] == 'new data'){
+    else if (lines[i] == 'say'){
+      script = script + 'this.echo(' + lines[i + 1] + ');';
+    }
+    else if (lines[i] == 'newdata'){
       script = 'var ' + lines[i + 1] + ';' + script;
       i++;
     }
+    else if (lines[i] == 'setdata'){
+      script = script + lines[i + 1] + ' = ' + lines[i + 2];
+    //the set data needs to be
+      i++;
+      i++;
+    }
+    else if (lines[i] == 'command'){
+      script = script + 'if (command == "' + lines[i + 1] + '")';
+      i++;
+    }
+    else if (lines[i] == 'then'){
+      script = script + '{';
+    }
+    else if (lines[i] == 'end'){
+      script = script + '}';
+    }
+    else if (lines[i] == 'setpre'){
+      promptything = lines[i + 1];
+      i++;
+    }
+    else {
+      //error function  
+    }
     i++;
   }
+  var thirdpart = 'height: ' + sheight + ', width: ' + switdh + ', prompt: "' + promptything + '" });});';
   script = script + secondpart + script2 + thirdpart;
   writelascript(script);
 }
@@ -129,6 +156,6 @@ function writelascript (script){
   document.getElementById("rightside").appendChild(div);
   var srcy = document.createElement("SCRIPT");
   srcy.innerHTML = script;
-  console.log(script);
+  // console.log(script);
   document.body.appendChild(srcy);
 }
