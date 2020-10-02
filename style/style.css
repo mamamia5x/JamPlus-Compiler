@@ -1,5 +1,5 @@
 textarea {
-  background: url(/img/lines.png);
+  background: url(img/lines.png);
   background-attachment: local;
   background-repeat: no-repeat;
   padding-left: 35px;
@@ -46,7 +46,7 @@ textarea {
 .rightside {
   float: right;
 }
-/* Add a black background color to the top navigation */
+/* Adds a black background color to the top navigation */
 .topnav {
   background-color: #333;
   overflow: hidden;
