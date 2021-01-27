@@ -144,7 +144,7 @@ function translate(script){
       if (ifs > 1){
         specialtext = 'else if';
       }
-      script = script + specialtext + ' (userinput == "' + lines[i + 1] + '")';
+      script = script + specialtext + ' (userinput == ' + lines[i + 1] + ')';
       i++;
     }
     else if (lines[i] == 'none'){
