@@ -5,15 +5,6 @@ The Beta Version, which is where I test new features, can be found here at https
 
 
 ##### *If you want to see documentation, go to the wiki found [here](https://github.com/mamamia5x/JamPlus-Compiler/wiki).*
-### Commands
-- startsay
-  - The first thing the script says once it starts.
-
-### Rules
-This language is set up different than other languages.
-- When you want to run a command, the line needs to be just the command name.
-- The next line will be the argument, if needed.
-  - For example, the first line would be "startsay", then the next line would be what you want the program to say when started.
 
 ### Version History
 
