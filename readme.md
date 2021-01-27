@@ -7,6 +7,7 @@ The Beta Version, which is where I test new features, can be found here at https
 ##### *If you want to see documentation, go to the wiki found [here](https://github.com/mamamia5x/JamPlus-Compiler/wiki).*
 
 ### Version History
+* V.0.0.5 - Fixed command command.
 
 * V.0.0.4 - Added new commands, like if, else, none, startdata. Added some documentation.
 
@@ -18,9 +19,9 @@ The Beta Version, which is where I test new features, can be found here at https
 
 ### Upcomming Updates
 #### In Progress
-  * More commands.
-  * Documentation
+  * Arrays (lists)
 #### Planned
+  * Functions
   * Download files, upload files.
   * Style the page.
 #### Nice to Have
